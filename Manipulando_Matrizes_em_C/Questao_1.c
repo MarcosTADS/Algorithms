@@ -58,14 +58,9 @@ void soma_coluna(int mat[4][8])
     printf("-----------------------------------------------------------------------------------");
 };
 
-
-
-
 int main(int argc, char const *argv[])
 {
     int MAT[4][8], i, j;
-
-
 
     printf("\n\nMatriz:\n");
     printf("-----------------------------------------------------------------------------------\n");
@@ -86,7 +81,6 @@ int main(int argc, char const *argv[])
 
     soma_linha(MAT);
     soma_coluna(MAT);
-
-
+    
     return 0;
 }

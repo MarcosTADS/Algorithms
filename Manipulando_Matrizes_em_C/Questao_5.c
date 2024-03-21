@@ -27,9 +27,9 @@ void print_mat_2(int mat_1[4][4], int mat_2[4][4])
     }
 };
 
-void mult_mat(int mat_1[4][4], int mat_2[4][4])
+void sum_mat(int mat_1[4][4], int mat_2[4][4])
 {
-    int i, j, k, matRes[4][4];
+    int i, j, matRes[4][4];
 
     for( i = 0; i < 4; i++)
     {
@@ -39,21 +39,18 @@ void mult_mat(int mat_1[4][4], int mat_2[4][4])
         }
     };
 
-    printf("\nResultado da multiplicacao das matrizes 1 e 2:\n\n");
+    printf("\nResultado da soma das matrizes 1 e 2:\n\n");
+
     for( i = 0; i < 4; i++)
     {
         for( j = 0; j < 4; j++)
         {
-            for(k = 0; k < 4; k++)
-            {
-                matRes[i][j] += mat_1[i][k] * mat_2[k][j];
-            }            
-            printf("%d \t", matRes[i][j]);
+            matRes[i][j] += mat_1[i][j] + mat_2[i][j];
+            printf("%d\t", matRes[i][j]);
         }
-        printf("\n");        
+        printf("\n");
     }
-
-};
+}
 
 int main(int argc, char const *argv[])
 {
@@ -76,6 +73,7 @@ int main(int argc, char const *argv[])
     }
 
     print_mat_2(MAT_1, MAT_2);
-    mult_mat(MAT_1, MAT_2);
+    sum_mat(MAT_1, MAT_2);
+
     return 0;
 }
